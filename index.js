@@ -63,12 +63,49 @@ eightBtn.addEventListener("click", () => {
   }
 });
 
+////////////////////////////////////////////////////////////
+decimalBtn.addEventListener("click", () => {
+  if (!operatorIsSelected){
+    displayScreen.textContent += "."
+    firstNumStr += "."
+  } else {
+    if (firstCharOfSecondNum){
+      displayScreen.textContent = ""
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "."
+    displayScreen.textContent += "."
+  }
+})
+
 //////////////////////////////////////////////////////////////
 plusBtn.addEventListener("click", () => {
   operatorIsSelected = true;
   operatorForEquation = "+";
   firstCharOfSecondNum = true;
 });
+
+//////////////////////////////////////////////////////////////
+minusBtn.addEventListener("click", () => {
+  operatorIsSelected = true;
+  operatorForEquation = "-";
+  firstCharOfSecondNum = true;
+})
+
+//////////////////////////////////////////////////////////////
+multiplyBtn.addEventListener("click", () => {
+  operatorIsSelected = true; 
+  operatorForEquation = "*";
+  firstCharOfSecondNum = true;
+})
+
+//////////////////////////////////////////////////////////////
+divisionBtn.addEventListener("click", () => {
+  operatorIsSelected = true; 
+  operatorForEquation = "/";
+  firstCharOfSecondNum = true;
+})
+
 
 //////////////////////////////////////////////////////////////
 equalBtn.addEventListener("click", () => {
@@ -85,7 +122,7 @@ equalBtn.addEventListener("click", () => {
       answer = +firstNumStr - +secondNumStr;
       console.log(answer);
       break;
-    case "x":
+    case "*":
       console.log(`operator was x`);
       answer = +firstNumStr * +secondNumStr;
       console.log(answer);
