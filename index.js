@@ -64,6 +64,112 @@ eightBtn.addEventListener("click", () => {
 });
 
 ////////////////////////////////////////////////////////////
+nineBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "9";
+    firstNumStr += "9";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "9";
+    displayScreen.textContent += "9";
+  }
+});
+
+////////////////////////////////////////////////////////////
+fourBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "4";
+    firstNumStr += "4";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "4";
+    displayScreen.textContent += "4";
+  }
+});
+
+////////////////////////////////////////////////////////////
+fiveBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "5";
+    firstNumStr += "5";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "5";
+    displayScreen.textContent += "5";
+  }
+});
+
+////////////////////////////////////////////////////////////
+sixBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "6";
+    firstNumStr += "6";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "6";
+    displayScreen.textContent += "6";
+  }
+});
+
+////////////////////////////////////////////////////////////
+oneBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "1";
+    firstNumStr += "1";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "1";
+    displayScreen.textContent += "1";
+  }
+});
+
+////////////////////////////////////////////////////////////
+twoBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "2";
+    firstNumStr += "2";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "2";
+    displayScreen.textContent += "2";
+  }
+});
+
+////////////////////////////////////////////////////////////
+threeBtn.addEventListener("click", () => {
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "3";
+    firstNumStr += "3";
+  } else {
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
+    secondNumStr += "3";
+    displayScreen.textContent += "3";
+  }
+});
+  
+
+////////////////////////////////////////////////////////////
 decimalBtn.addEventListener("click", () => {
   if (!operatorIsSelected){
     displayScreen.textContent += "."
@@ -106,6 +212,17 @@ divisionBtn.addEventListener("click", () => {
   firstCharOfSecondNum = true;
 })
 
+clearBtn.addEventListener("click", () => {
+  operatorIsSelected = false;
+  firstNumStr = "";
+  secondNumStr = "";
+  operatorForEquation = "";
+  equalBtnSelected = false;
+  answer = 0;
+  firstCharOfSecondNum = false;
+  displayScreen.textContent = "";
+})
+
 
 //////////////////////////////////////////////////////////////
 equalBtn.addEventListener("click", () => {
@@ -120,16 +237,22 @@ equalBtn.addEventListener("click", () => {
     case "-":
       console.log(`operator was -`);
       answer = +firstNumStr - +secondNumStr;
+      console.log(firstNumStr);
+      console.log(secondNumStr);
       console.log(answer);
       break;
     case "*":
       console.log(`operator was x`);
       answer = +firstNumStr * +secondNumStr;
+      console.log(firstNumStr);
+      console.log(secondNumStr);
       console.log(answer);
       break;
     case "/":
       console.log(`operator was /`);
       answer = +firstNumStr / +secondNumStr;
+      console.log(firstNumStr);
+      console.log(secondNumStr);
       console.log(answer);
       break;
   }
