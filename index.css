@@ -1,0 +1,123 @@
+
+
+.container {
+  width: 500px;
+  margin: 4% auto;
+  margin-bottom: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+}
+
+.calculator {
+  border: .5px solid #dddddd;
+  border-radius: 3px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+  height: 600px;
+  grid-gap: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 32px;
+  
+}
+
+.display {
+  height: 80px;
+  width: 85%;
+  grid-column: 1 / 5;
+  border: .5px solid #dddddd;
+  border-radius: 3px;
+  margin: auto;
+  font-size: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  
+}
+
+.display:hover {
+  border: 1px solid #bbb;
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.operator {
+
+  font-size: 28px;
+  background-color: #dddddd;
+  border: .5px solid #bbbbbb;
+}
+
+.operator:hover {
+  background-color: #ddd;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+}
+
+.operator:active {
+  font-weight: bold;
+}
+
+
+
+
+
+.equal {
+  grid-column: 4 / 5;
+  grid-row: 3/ 7;
+  background-color: #4D90FE;
+  color: white;
+  font-size: 28px;
+  border: 1px solid #ddd;
+  
+  
+}
+
+.equal:hover {
+  background-color: #307CF9;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #1857BB;
+}
+
+.equal:active {
+  font-weight: bold;
+}
+
+.all-num-buttons {
+  cursor: pointer;
+  background-color: #F9F9F9;
+  border: 1px solid #ddd;
+  font-size: 28px;
+}
+
+.all-num-buttons:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+}
+
+.all-num-buttons:active {
+  font-weight: bold;
+}
+
+/* .operator-container {
+  display: flex;
+  grid-column: 1 / 5;
+  justify-content: center;
+}
+.operators {
+  width: 80%;
+  grid-column: 1 / 5;
+  border: .5px solid #dddddd;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+} */
