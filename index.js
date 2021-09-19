@@ -41,7 +41,7 @@ sevenBtn.addEventListener("click", () => {
   } else {
     displayScreen.textContent = "";
     secondNumStr += "7";
-    displayScreen.textContent = "7";
+    displayScreen.textContent += "7";
   }
 });
 
@@ -61,15 +61,14 @@ eightBtn.addEventListener("click", () => {
 //////////////////////////////////////////////////////////////
 plusBtn.addEventListener("click", () => {
   operatorIsSelected = true;
-  // displayScreen.textContent = "";
   operatorForEquation = "+";
 });
 
 //////////////////////////////////////////////////////////////
 equalBtn.addEventListener("click", () => {
 
-  const operator = operatorForEquation
-  switch (operator) {
+  
+  switch (operatorForEquation) {
     case '+':
       console.log(`operator was +`)
       answer = +firstNumStr + +secondNumStr;
