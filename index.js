@@ -27,7 +27,7 @@ let secondNumStr = "";
 let operatorForEquation;
 let equalBtnSelected = false;
 let answer = 0;
-
+let firstCharOfSecondNum = false;
 
 /*
 NUMBER FUNCTIONS
@@ -35,74 +35,76 @@ NUMBER FUNCTIONS
 
 ////////////////////////////////////////////////////////////
 sevenBtn.addEventListener("click", () => {
-  displayScreen.textContent += "7";
   if (!operatorIsSelected) {
+    displayScreen.textContent += "7";
     firstNumStr += "7";
   } else {
-    displayScreen.textContent = "";
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
     secondNumStr += "7";
     displayScreen.textContent += "7";
   }
 });
 
-
 ////////////////////////////////////////////////////////////
 eightBtn.addEventListener("click", () => {
-  displayScreen.textContent += "8"
-  if(!operatorIsSelected) {
-    firstNumStr += "8"
+  if (!operatorIsSelected) {
+    displayScreen.textContent += "8";
+    firstNumStr += "8";
   } else {
-    displayScreen.textContent = "";
+    if (firstCharOfSecondNum) {
+      displayScreen.textContent = "";
+      firstCharOfSecondNum = false;
+    }
     secondNumStr += "8";
-    displayScreen.textContent = "8"
+    displayScreen.textContent += "8";
   }
-})
+});
 
 //////////////////////////////////////////////////////////////
 plusBtn.addEventListener("click", () => {
   operatorIsSelected = true;
   operatorForEquation = "+";
+  firstCharOfSecondNum = true;
 });
 
 //////////////////////////////////////////////////////////////
 equalBtn.addEventListener("click", () => {
-
-  
   switch (operatorForEquation) {
-    case '+':
-      console.log(`operator was +`)
+    case "+":
+      console.log(`operator was +`);
       answer = +firstNumStr + +secondNumStr;
-      console.log(firstNumStr)
-      console.log(secondNumStr)
+      console.log(firstNumStr);
+      console.log(secondNumStr);
       console.log(answer);
       break;
-    case '-':
-      console.log(`operator was -`)
-      answer = +firstNumStr - +secondNumStr
-      console.log(answer)
+    case "-":
+      console.log(`operator was -`);
+      answer = +firstNumStr - +secondNumStr;
+      console.log(answer);
       break;
-    case 'x':
-      console.log(`operator was x`)
-      answer = +firstNumStr * +secondNumStr
-      console.log(answer)
+    case "x":
+      console.log(`operator was x`);
+      answer = +firstNumStr * +secondNumStr;
+      console.log(answer);
       break;
-    case '/':
-      console.log(`operator was /`)
-      answer = +firstNumStr / +secondNumStr
-      console.log(answer)
+    case "/":
+      console.log(`operator was /`);
+      answer = +firstNumStr / +secondNumStr;
+      console.log(answer);
       break;
   }
 
-   displayScreen.textContent = answer;
+  displayScreen.textContent = answer;
 
-   firstNumStr = answer;
-   secondNumStr = "";
+  firstNumStr = answer;
+  secondNumStr = "";
 
-   /*
+  /*
     Need to finish the logic here if they instantly start typing a new num without hititng clear first
    */
-
 });
 
 //////////////////////////////////////////////////////////////
-
