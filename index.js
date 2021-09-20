@@ -30,162 +30,46 @@ let answer = 0;
 let firstCharOfSecondNum = false;
 
 /*
-NUMBER FUNCTIONS
+NUMBER FUNCTION
 */
 
-////////////////////////////////////////////////////////////
-sevenBtn.addEventListener("click", () => {
+function addCharacterToNumberInput(char) {
   if (!operatorIsSelected) {
-    displayScreen.textContent += "7";
-    firstNumStr += "7";
+    displayScreen.textContent += char;
+    firstNumStr += char;
   } else {
     if (firstCharOfSecondNum) {
       displayScreen.textContent = "";
       firstCharOfSecondNum = false;
     }
-    secondNumStr += "7";
-    displayScreen.textContent += "7";
+    secondNumStr += char;
+    displayScreen.textContent += char;
   }
-});
+}
 
-////////////////////////////////////////////////////////////
-eightBtn.addEventListener("click", () => {
-  if (!operatorIsSelected) {
-    displayScreen.textContent += "8";
-    firstNumStr += "8";
-  } else {
-    if (firstCharOfSecondNum) {
-      displayScreen.textContent = "";
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "8";
-    displayScreen.textContent += "8";
-  }
-});
+oneBtn.addEventListener("click", () => addCharacterToNumberInput('1'));
+twoBtn.addEventListener("click", () => addCharacterToNumberInput('2'));
+threeBtn.addEventListener("click", () => addCharacterToNumberInput('3'));
+fourBtn.addEventListener("click", () => addCharacterToNumberInput('4'));
+fiveBtn.addEventListener("click", () => addCharacterToNumberInput('5'));
+sixBtn.addEventListener("click", () => addCharacterToNumberInput('6'));
+sevenBtn.addEventListener("click", () => addCharacterToNumberInput('7'));
+eightBtn.addEventListener("click", () => addCharacterToNumberInput('8'));
+nineBtn.addEventListener("click", () => addCharacterToNumberInput('9'));
+zeroBtn.addEventListener("click", () => addCharacterToNumberInput('0'))
+decimalBtn.addEventListener("click", () => addCharacterToNumberInput('.'))
 
-////////////////////////////////////////////////////////////
-nineBtn.addEventListener("click", () => {
-  if (!operatorIsSelected) {
-    displayScreen.textContent += "9";
-    firstNumStr += "9";
-  } else {
-    if (firstCharOfSecondNum) {
-      displayScreen.textContent = "";
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "9";
-    displayScreen.textContent += "9";
-  }
-});
 
-////////////////////////////////////////////////////////////
-fourBtn.addEventListener("click", () => {
-  if (!operatorIsSelected) {
-    displayScreen.textContent += "4";
-    firstNumStr += "4";
-  } else {
-    if (firstCharOfSecondNum) {
-      displayScreen.textContent = "";
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "4";
-    displayScreen.textContent += "4";
-  }
-});
-
-////////////////////////////////////////////////////////////
-fiveBtn.addEventListener("click", () => {
-  if (!operatorIsSelected) {
-    displayScreen.textContent += "5";
-    firstNumStr += "5";
-  } else {
-    if (firstCharOfSecondNum) {
-      displayScreen.textContent = "";
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "5";
-    displayScreen.textContent += "5";
-  }
-});
-
-////////////////////////////////////////////////////////////
-sixBtn.addEventListener("click", () => {
-  if (!operatorIsSelected) {
-    displayScreen.textContent += "6";
-    firstNumStr += "6";
-  } else {
-    if (firstCharOfSecondNum) {
-      displayScreen.textContent = "";
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "6";
-    displayScreen.textContent += "6";
-  }
-});
-
-////////////////////////////////////////////////////////////
-oneBtn.addEventListener("click", () => {
-  if (!operatorIsSelected) {
-    displayScreen.textContent += "1";
-    firstNumStr += "1";
-  } else {
-    if (firstCharOfSecondNum) {
-      displayScreen.textContent = "";
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "1";
-    displayScreen.textContent += "1";
-  }
-});
-
-////////////////////////////////////////////////////////////
-twoBtn.addEventListener("click", () => {
-  if (!operatorIsSelected) {
-    displayScreen.textContent += "2";
-    firstNumStr += "2";
-  } else {
-    if (firstCharOfSecondNum) {
-      displayScreen.textContent = "";
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "2";
-    displayScreen.textContent += "2";
-  }
-});
-
-////////////////////////////////////////////////////////////
-threeBtn.addEventListener("click", () => {
-  if (!operatorIsSelected) {
-    displayScreen.textContent += "3";
-    firstNumStr += "3";
-  } else {
-    if (firstCharOfSecondNum) {
-      displayScreen.textContent = "";
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "3";
-    displayScreen.textContent += "3";
-  }
-});
-  
-
-////////////////////////////////////////////////////////////
-decimalBtn.addEventListener("click", () => {
-  if (!operatorIsSelected){
-    displayScreen.textContent += "."
-    firstNumStr += "."
-  } else {
-    if (firstCharOfSecondNum){
-      displayScreen.textContent = ""
-      firstCharOfSecondNum = false;
-    }
-    secondNumStr += "."
-    displayScreen.textContent += "."
-  }
-})
 
 //////////////////////////////////////////////////////////////
 plusBtn.addEventListener("click", () => {
+  /*
+
+  if (operatorIsSelected){
+    newStrVariable = firstNum + operatorForEquation + textDisplay 
+  }
+
+  */
   operatorIsSelected = true;
   operatorForEquation = "+";
   firstCharOfSecondNum = true;
@@ -212,6 +96,7 @@ divisionBtn.addEventListener("click", () => {
   firstCharOfSecondNum = true;
 })
 
+//////////////////////////////////////////////////////////////
 clearBtn.addEventListener("click", () => {
   operatorIsSelected = false;
   firstNumStr = "";
@@ -262,9 +147,7 @@ equalBtn.addEventListener("click", () => {
   firstNumStr = answer;
   secondNumStr = "";
 
-  /*
-    Need to finish the logic here if they instantly start typing a new num without hititng clear first
-   */
+ 
 });
 
 //////////////////////////////////////////////////////////////
