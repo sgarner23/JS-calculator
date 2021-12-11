@@ -103,32 +103,16 @@ clearBtn.addEventListener("click", () => {
 equalBtn.addEventListener("click", () => {
   switch (operatorForEquation) {
     case "+":
-      console.log(`operator was +`);
       answer = +firstNumStr + +secondNumStr;
-      console.log(firstNumStr);
-      console.log(secondNumStr);
-      console.log(answer);
       break;
     case "-":
-      console.log(`operator was -`);
       answer = +firstNumStr - +secondNumStr;
-      console.log(firstNumStr);
-      console.log(secondNumStr);
-      console.log(answer);
       break;
     case "*":
-      console.log(`operator was x`);
       answer = +firstNumStr * +secondNumStr;
-      console.log(firstNumStr);
-      console.log(secondNumStr);
-      console.log(answer);
       break;
     case "/":
-      console.log(`operator was /`);
       answer = +firstNumStr / +secondNumStr;
-      console.log(firstNumStr);
-      console.log(secondNumStr);
-      console.log(answer);
       break;
   }
 
